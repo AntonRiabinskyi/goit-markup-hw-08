@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 
@@ -19,30 +20,44 @@
     <!-- Голова -->
     <header class="page-header">
         <div class="container main-nav">
-            <nav class="main-nav">
+            <nav class="navigation">
                 <a href="/" class="logo">
                     Web<span class="accent-logo">Studio</span>
                 </a>
+                <button type="button" class="menu-button is-open" 
+                    aria-expanded="false"
+                    data-menu-button
+                >
+                    <svg width="40" height="40"
+                    aria-label="переключатель мобильного меню"
+                    >
+                        <use class="icon-menu-mob" href="./images/sprite.svg#menu-mob"></use>
+                        <use class="icon-close-mob" href="./images/sprite.svg#close-mob"></use>
+                    </svg>
+                </button>
+                <div class="menu-container" data-menu>
+                    <ul class="site-nav">
+                        <li class="site-nav__item"><a href="./index.html" class="site-nav__link current">Студия</a></li>
+                        <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link ">Портфолио</a></li>
+                        <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
+                    </ul>
+                    <ul class="contact">
+                        <li class="contact__item"><a href="mailto:info@devstudio.com" class="contact__link">
+                                <svg class="contact__icon" width="16" height="12">
+                                    <use href="./images/sprite.svg#icon-maile-header"></use>
+                                </svg>info@devstudio.com</a>
+                        </li>
+                        <li class="contact__item"><a href="tel:+380961111111" class="contact__link">
+                                <svg class="contact__icon" width="10" height="16">
+                                    <use href="./images/sprite.svg#icon-mobile-header"></use>
+                                </svg>+38 096 111 11 11</a>
+                        </li>
+                    </ul>
 
-                <ul class="site-nav">
-                    <li class="site-nav__item"><a href="./index.html" class="site-nav__link current">Студия</a></li>
-                    <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link ">Портфолио</a></li>
-                    <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
-                </ul>
+                </div> 
 
             </nav>
-            <ul class="contact">
-                <li class="contact__item"><a href="mailto:info@devstudio.com" class="contact__link">
-                        <svg class="contact__icon" width="16" height="12">
-                            <use href="./images/sprite.svg#icon-maile-header"></use>
-                        </svg>info@devstudio.com</a>
-                </li>
-                <li class="contact__item"><a href="tel:+380961111111" class="contact__link">
-                        <svg class="contact__icon" width="10" height="16">
-                            <use href="./images/sprite.svg#icon-mobile-header"></use>
-                        </svg>+38 096 111 11 11</a>
-                </li>
-            </ul>
+            
 
         </div>
 
@@ -509,6 +524,7 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 
 
 </body>
