@@ -75,8 +75,8 @@ body {
 .container {
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
 }
 
 .button {
@@ -421,6 +421,7 @@ body {
 
 .main-nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
