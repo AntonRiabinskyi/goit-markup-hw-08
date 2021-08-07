@@ -551,16 +551,24 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 320px) {
   .section-title {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: var(--title-text-color);
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
   }
   .doing-list {
     display: flex;
@@ -684,38 +692,36 @@ body {
   background-color: var(--background-fon-color-team);
 }
 
-.team-list {
-  min-width: 1170px;
-  min-height: 368px;
-  display: flex;
-  justify-content: center;
-}
-
-.team-list .item-card {
-  margin-right: 30px;
-  width: 270px;
-}
-
-.team-list .item-card:nth-child(4n) {
-  margin-right: 0;
-}
-
-.team-list .team-title {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  margin-bottom: 10px;
-  color: var(--title-text-color);
-}
-
-.team-list .text-team {
-  font-size: 16px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  margin: 0 auto;
-  margin-bottom: 16px;
-  font-weight: 400;
+@media screen and (min-width: 1200px) {
+  .team-list {
+    min-width: 1170px;
+    min-height: 368px;
+    display: flex;
+    justify-content: center;
+  }
+  .team-list .item-card {
+    margin-right: 30px;
+    width: 270px;
+  }
+  .team-list .item-card:nth-child(4n) {
+    margin-right: 0;
+  }
+  .team-list .team-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+  }
+  .team-list .text-team {
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
 }
 
 .item-card {
@@ -726,10 +732,25 @@ body {
 
 .item-card-title {
   padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-bottom: 24px;
+  padding-left: 122px;
+  padding-right: 122px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .item-card-title {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .item-card-title {
+    padding-bottom: 30px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 .clients-list {
