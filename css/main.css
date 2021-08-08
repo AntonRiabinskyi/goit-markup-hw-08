@@ -47,6 +47,10 @@ img {
   max-width: 100%;
 }
 
+.link {
+  text-decoration: none;
+}
+
 body {
   background-color: #ffffff;
   color: var(--primary-text-color);
@@ -458,13 +462,21 @@ body {
   border-color: var(--accent-color);
 }
 
+.site-nav {
+  display: none;
+}
+
+.contact {
+  display: none;
+}
+
 /* logo*/
 .logo {
   text-decoration: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
@@ -473,25 +485,94 @@ body {
   color: #000000;
 }
 
+.burger-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+.burger-btn_icon {
+  width: 40px;
+  height: 40px;
+}
+
 /*Main-nav*/
 .main-nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 /*Page-heder*/
 .page-header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--second-color);
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+.close-btn_icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu_close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.mobile-menu_container {
+  position: relative;
+  padding-top: 48px;
+  padding-left: 40px;
+}
+
+.nav-list_link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  margin-bottom: 32px;
+}
+
+/*Main-nav*/
+/*.main-nav {
+  display: flex;
+  align-items: center;
+}*/
+/*Page-heder*/
+/*.page-header {
   border-bottom: 1px solid #ececec;
 }
-
 /* site-nav */
-.site-nav {
+/*.site-nav {
   display: flex;
   margin-left: 93px;
-}
 
-.site-nav .site-nav__item:not(:last-child) {
-  margin-right: 50px;
+  & .site-nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .site-nav__link {
@@ -499,75 +580,70 @@ body {
   padding-top: 32px;
   display: block;
   color: var(--title-text-color);
-  text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 32px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.site-nav__link:hover, .site-nav__link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .site-nav__link.current {
   color: var(--accent-color);
   position: relative;
-}
 
-.site-nav__link.current::after {
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  padding-bottom: 32px;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  border-bottom: 4px solid var(--accent-color);
-  content: '';
-}
-
+  &::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    padding-bottom: 32px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    border-bottom: 4px solid var(--accent-color);
+    content: "";
+  }
+}*/
 /* Contact-nav */
-.contact {
+/*.contact {
   display: flex;
   margin-left: auto;
-}
 
-.contact .contact__item + .contact__item {
-  margin-left: 50px;
+  & .contact__item + .contact__item {
+    margin-left: 50px;
+  }
+  & .contact__link {
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+  }
 }
-
-.contact .contact__link {
-  align-items: center;
-  text-decoration: none;
-  color: var(--primary-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-}
-
 .contact__link:hover,
 .contact__link:focus {
   color: var(--accent-color);
 }
-
 .contact__icon {
   margin-right: 10px;
   fill: var(--primary-text-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.contact__link:hover .contact__icon,
-.contact__link:focus .contact__icon {
-  fill: var(--accent-color);
-}
-
+  .contact__link:hover &,
+  .contact__link:focus & {
+    fill: var(--accent-color);
+  }
+}*/
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
@@ -577,7 +653,7 @@ body {
   height: 400px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/gallery/command-hero.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/gallery/hero-m.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -594,10 +670,22 @@ body {
   margin-top: 0;
 }
 
+@media (min-device-pixel-ratio: 2) and (min-width: 320px), (min-resolution: 192dpi) and (min-width: 320px), (min-resolution: 2dppx) and (min-width: 320px) {
+  .hero {
+    background-image: url("../images/gallery/hero-m@2x.jpg");
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/gallery/command-hero.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/gallery/hero-t.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: url("../images/gallery/hero-t@2x.jpg");
   }
 }
 
@@ -607,11 +695,17 @@ body {
     padding-bottom: 200px;
     max-width: 1600px;
     height: 600px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/gallery/command-hero.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/gallery/hero-d.jpg);
   }
   .hero-title {
     font-size: 44px;
     line-height: 1.36;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-width: 1200px) and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: url("../images/gallery/hero-d@2x.jpg");
   }
 }
 

@@ -1,27 +1,98 @@
+.site-nav {
+  display: none;
+}
+.contact {
+  display: none;
+}
 /* logo*/
 .logo {
   text-decoration: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--accent-color);
 }
 .accent-logo {
   color: #000000;
 }
+.burger-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+
+  &_icon {
+    width: 40px;
+    height: 40px;
+  }
+}
 /*Main-nav*/
 .main-nav {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 /*Page-heder*/
 .page-header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--second-color);
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+
+  &_icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+.mobile-menu_close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.mobile-menu_container {
+  position: relative;
+  padding-top: 48px;
+  padding-left: 40px;
+}
+.nav-list_link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  margin-bottom: 32px;
+}
+
+/*Main-nav*/
+/*.main-nav {
+  display: flex;
+  align-items: center;
+}*/
+/*Page-heder*/
+/*.page-header {
   border-bottom: 1px solid #ececec;
 }
 /* site-nav */
-.site-nav {
+/*.site-nav {
   display: flex;
   margin-left: 93px;
 
@@ -35,7 +106,6 @@
   padding-top: 32px;
   display: block;
   color: var(--title-text-color);
-  text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -63,12 +133,12 @@
     height: 4px;
     border-radius: 2px;
     border-bottom: 4px solid var(--accent-color);
-    content: '';
+    content: "";
   }
-}
+}*/
 
 /* Contact-nav */
-.contact {
+/*.contact {
   display: flex;
   margin-left: auto;
 
@@ -100,4 +170,4 @@
   .contact__link:focus & {
     fill: var(--accent-color);
   }
-}
+}*/
