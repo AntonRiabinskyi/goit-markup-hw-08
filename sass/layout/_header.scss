@@ -22,6 +22,8 @@
   border: none;
   padding: 0;
   line-height: 0;
+  top: 10px;
+  right: 10px;
 
   &_icon {
     width: 40px;
@@ -47,6 +49,16 @@
   width: 100vw;
   height: 100vh;
   background-color: var(--second-color);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .close-btn {
@@ -79,6 +91,8 @@
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+}
+.nav-list_item {
   margin-bottom: 32px;
 }
 
