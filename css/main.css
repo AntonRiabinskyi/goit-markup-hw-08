@@ -1410,24 +1410,18 @@ body {
 
 .filter-menu {
   display: flex;
-  justify-content: left;
-  margin-top: -15px;
   margin-bottom: 40px;
-}
-
-.filter-menu__item {
-  margin-top: 15px;
 }
 
 .filter-menu__item:not(:last-child) {
   margin-right: 8px;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 767px) {
   .filter-menu {
     flex-wrap: wrap;
   }
-  .work__item:nth-child(-n + 3) {
+  .filter-menu__item:nth-child(-n + 3) {
     margin-bottom: 15px;
   }
 }
@@ -1446,6 +1440,16 @@ body {
   }
   .filter-menu {
     margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .work {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+    box-sizing: border-box;
   }
 }
 
