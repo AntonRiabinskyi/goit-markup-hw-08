@@ -312,8 +312,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   padding: 40px;
   background-color: var(--second-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -328,7 +328,7 @@ body {
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 .contact-form {
@@ -433,17 +433,24 @@ body {
 }
 
 .modal-form-policy-link {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--accent-color);
 }
 
+.modal-form-checkbox-policy {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
 .modal-form-checkbox-policy::before {
   display: inline-block;
   vertical-align: middle;
-  content: '';
+  content: "";
   width: 16px;
   height: 15px;
   border: 2px solid var(--title-text-color);
@@ -461,6 +468,20 @@ body {
 
 .modal-form-checkbox:focus + .modal-form-checkbox-policy::before {
   border-color: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+  .modal-form-policy-link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: var(--accent-color);
+  }
 }
 
 .site-nav {
@@ -1443,6 +1464,23 @@ body {
   }
 }
 
+.work__item {
+  width: 450px;
+  background-color: var(--second-color);
+  box-sizing: border-box;
+}
+
+.work__link {
+  display: flex;
+  flex-direction: column;
+  color: currentColor;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work__link:focus, .work__link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .work-title {
   padding: 20px 24px;
   border-right: 1px solid var(--portfolio-border-color-);
@@ -1499,23 +1537,7 @@ body {
   opacity: 1;
 }
 
-.overlay .work__link {
-  display: flex;
-  flex-direction: column;
-  color: currentColor;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.overlay .work__link:focus, .overlay .work__link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 @media screen and (max-width: 767px) {
-  .work__item {
-    width: 450px;
-    background-color: var(--second-color);
-    box-sizing: border-box;
-  }
   .work__item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -1540,8 +1562,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .work > .work__item {
-    margin-left: 30px;
-    margin-top: 30px;
+    width: 370px;
     flex-basis: calc(100% / 3 - 30px);
   }
 }
